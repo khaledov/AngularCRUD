@@ -29,7 +29,8 @@ namespace Framework.Mongo
         public async Task<IList<TEntity>> Get()
         => await Collection.AsQueryable().ToListAsync();
 
-
+        public async Task<IEnumerable<TEntity>> Find(Expression<Func<TEntity, bool>> predicate)
+           => await Collection.Find(predicate).ToListAsync();
 
         public async Task Add(TEntity entity)
        => await Collection.InsertOneAsync(entity);
