@@ -1,6 +1,6 @@
 ﻿namespace Framework.CQRS
 {
-    public class Command : Message
+    public interface IMessage
     {
     }
 }

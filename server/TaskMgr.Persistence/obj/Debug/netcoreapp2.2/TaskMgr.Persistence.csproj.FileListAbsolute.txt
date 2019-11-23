@@ -1,0 +1,9 @@
+D:\Code\HOL\Angular\AngularCRUD\server\TaskMgr.Persistence\bin\Debug\netcoreapp2.2\TaskMgr.Persistence.deps.json
+D:\Code\HOL\Angular\AngularCRUD\server\TaskMgr.Persistence\bin\Debug\netcoreapp2.2\TaskMgr.Persistence.dll
+D:\Code\HOL\Angular\AngularCRUD\server\TaskMgr.Persistence\obj\Debug\netcoreapp2.2\TaskMgr.Persistence.csproj.CoreCompileInputs.cache
+D:\Code\HOL\Angular\AngularCRUD\server\TaskMgr.Persistence\obj\Debug\netcoreapp2.2\TaskMgr.Persistence.AssemblyInfoInputs.cache
+D:\Code\HOL\Angular\AngularCRUD\server\TaskMgr.Persistence\obj\Debug\netcoreapp2.2\TaskMgr.Persistence.AssemblyInfo.cs
+D:\Code\HOL\Angular\AngularCRUD\server\TaskMgr.Persistence\bin\Debug\netcoreapp2.2\TaskMgr.Persistence.pdb
+D:\Code\HOL\Angular\AngularCRUD\server\TaskMgr.Persistence\obj\Debug\netcoreapp2.2\TaskMgr.Persistence.csprojAssemblyReference.cache
+D:\Code\HOL\Angular\AngularCRUD\server\TaskMgr.Persistence\obj\Debug\netcoreapp2.2\TaskMgr.Persistence.dll
+D:\Code\HOL\Angular\AngularCRUD\server\TaskMgr.Persistence\obj\Debug\netcoreapp2.2\TaskMgr.Persistence.pdb

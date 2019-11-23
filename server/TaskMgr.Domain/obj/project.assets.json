@@ -602,8 +602,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll": {}
         },
         "build": {
-          "build/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.props": {},
-          "build/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.targets": {}
+          "build/netstandard2.0/_._": {}
         }
       },
       "Microsoft.AspNetCore.Mvc.RazorPages/2.2.0": {
@@ -669,10 +668,10 @@
       "Microsoft.AspNetCore.Razor.Design/2.2.0": {
         "type": "package",
         "build": {
-          "build/netstandard2.0/Microsoft.AspNetCore.Razor.Design.props": {}
+          "build/netstandard2.0/_._": {}
         },
         "buildMultiTargeting": {
-          "buildMultiTargeting/Microsoft.AspNetCore.Razor.Design.props": {}
+          "buildMultiTargeting/_._": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Language/2.2.0": {
@@ -753,7 +752,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Server.IIS.dll": {}
         },
         "build": {
-          "build/netstandard2.0/Microsoft.AspNetCore.Server.IIS.targets": {}
+          "build/netstandard2.0/_._": {}
         },
         "runtimeTargets": {
           "runtimes/win-x64/nativeassets/netcoreapp2.2/aspnetcorev2_inprocess.dll": {
@@ -790,7 +789,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Server.IISIntegration.dll": {}
         },
         "build": {
-          "build/netstandard2.0/Microsoft.AspNetCore.Server.IISIntegration.targets": {}
+          "build/netstandard2.0/_._": {}
         }
       },
       "Microsoft.AspNetCore.Server.Kestrel/2.2.0": {
@@ -1116,8 +1115,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.dll": {}
         },
         "build": {
-          "build/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.props": {},
-          "build/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.targets": {}
+          "build/netstandard2.0/_._": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/2.2.0": {
@@ -3687,6 +3685,30 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
+        }
+      },
+      "Framework/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "5.0.1",
+          "Microsoft.AspNetCore": "2.2.0",
+          "Microsoft.AspNetCore.Authentication": "2.2.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "2.2.0",
+          "Microsoft.AspNetCore.Authorization": "2.2.0",
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "Microsoft.Extensions.Configuration.Binder": "2.2.4",
+          "Microsoft.Extensions.Configuration.Json": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection": "2.2.0",
+          "Microsoft.Extensions.Options": "2.2.0",
+          "MongoDB.Driver": "2.9.2"
+        },
+        "compile": {
+          "bin/placeholder/Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Framework.dll": {}
         }
       }
     }
@@ -10780,23 +10802,17 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Framework/1.0.0": {
+      "type": "project",
+      "path": "../Framework/Framework.csproj",
+      "msbuildProject": "../Framework/Framework.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "Autofac.Extensions.DependencyInjection >= 5.0.1",
-      "Microsoft.AspNetCore >= 2.2.0",
-      "Microsoft.AspNetCore.Authentication >= 2.2.0",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 2.2.0",
-      "Microsoft.AspNetCore.Authorization >= 2.2.0",
-      "Microsoft.AspNetCore.Mvc >= 2.2.0",
-      "Microsoft.AspNetCore.Mvc.Core >= 2.2.0",
-      "Microsoft.Extensions.Configuration.Binder >= 2.2.4",
-      "Microsoft.Extensions.Configuration.Json >= 2.2.0",
-      "Microsoft.Extensions.DependencyInjection >= 2.2.0",
-      "Microsoft.Extensions.Options >= 2.2.0",
-      "Microsoft.NETCore.App >= 2.2.0",
-      "MongoDB.Driver >= 2.9.2"
+      "Framework >= 1.0.0",
+      "Microsoft.NETCore.App >= 2.2.0"
     ]
   },
   "packageFolders": {
@@ -10806,11 +10822,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\HOL\\Angular\\AngularCRUD\\server\\Framework\\Framework.csproj",
-      "projectName": "Framework",
-      "projectPath": "D:\\Code\\HOL\\Angular\\AngularCRUD\\server\\Framework\\Framework.csproj",
+      "projectUniqueName": "D:\\Code\\HOL\\Angular\\AngularCRUD\\server\\TaskMgr.Domain\\TaskMgr.Domain.csproj",
+      "projectName": "TaskMgr.Domain",
+      "projectPath": "D:\\Code\\HOL\\Angular\\AngularCRUD\\server\\TaskMgr.Domain\\TaskMgr.Domain.csproj",
       "packagesPath": "C:\\Users\\leader\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\HOL\\Angular\\AngularCRUD\\server\\Framework\\obj\\",
+      "outputPath": "D:\\Code\\HOL\\Angular\\AngularCRUD\\server\\TaskMgr.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -10828,7 +10844,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Code\\HOL\\Angular\\AngularCRUD\\server\\Framework\\Framework.csproj": {
+              "projectPath": "D:\\Code\\HOL\\Angular\\AngularCRUD\\server\\Framework\\Framework.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -10840,59 +10860,11 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
-          "Autofac.Extensions.DependencyInjection": {
-            "target": "Package",
-            "version": "[5.0.1, )"
-          },
-          "Microsoft.AspNetCore": {
-            "target": "Package",
-            "version": "[2.2.0, )"
-          },
-          "Microsoft.AspNetCore.Authentication": {
-            "target": "Package",
-            "version": "[2.2.0, )"
-          },
-          "Microsoft.AspNetCore.Authentication.JwtBearer": {
-            "target": "Package",
-            "version": "[2.2.0, )"
-          },
-          "Microsoft.AspNetCore.Authorization": {
-            "target": "Package",
-            "version": "[2.2.0, )"
-          },
-          "Microsoft.AspNetCore.Mvc": {
-            "target": "Package",
-            "version": "[2.2.0, )"
-          },
-          "Microsoft.AspNetCore.Mvc.Core": {
-            "target": "Package",
-            "version": "[2.2.0, )"
-          },
-          "Microsoft.Extensions.Configuration.Binder": {
-            "target": "Package",
-            "version": "[2.2.4, )"
-          },
-          "Microsoft.Extensions.Configuration.Json": {
-            "target": "Package",
-            "version": "[2.2.0, )"
-          },
-          "Microsoft.Extensions.DependencyInjection": {
-            "target": "Package",
-            "version": "[2.2.0, )"
-          },
-          "Microsoft.Extensions.Options": {
-            "target": "Package",
-            "version": "[2.2.0, )"
-          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
-          },
-          "MongoDB.Driver": {
-            "target": "Package",
-            "version": "[2.9.2, )"
           }
         },
         "imports": [
