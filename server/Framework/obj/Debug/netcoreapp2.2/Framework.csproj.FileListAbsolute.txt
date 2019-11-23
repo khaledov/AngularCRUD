@@ -1,0 +1,9 @@
+D:\Code\HOL\Angular\AngularCRUD\server\Framework\bin\Debug\netcoreapp2.2\Framework.deps.json
+D:\Code\HOL\Angular\AngularCRUD\server\Framework\bin\Debug\netcoreapp2.2\Framework.dll
+D:\Code\HOL\Angular\AngularCRUD\server\Framework\obj\Debug\netcoreapp2.2\Framework.csprojAssemblyReference.cache
+D:\Code\HOL\Angular\AngularCRUD\server\Framework\obj\Debug\netcoreapp2.2\Framework.csproj.CoreCompileInputs.cache
+D:\Code\HOL\Angular\AngularCRUD\server\Framework\obj\Debug\netcoreapp2.2\Framework.AssemblyInfoInputs.cache
+D:\Code\HOL\Angular\AngularCRUD\server\Framework\obj\Debug\netcoreapp2.2\Framework.AssemblyInfo.cs
+D:\Code\HOL\Angular\AngularCRUD\server\Framework\bin\Debug\netcoreapp2.2\Framework.pdb
+D:\Code\HOL\Angular\AngularCRUD\server\Framework\obj\Debug\netcoreapp2.2\Framework.dll
+D:\Code\HOL\Angular\AngularCRUD\server\Framework\obj\Debug\netcoreapp2.2\Framework.pdb
