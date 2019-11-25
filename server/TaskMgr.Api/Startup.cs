@@ -24,7 +24,9 @@ using TaskMgr.Api.EventHandlers;
 using TaskMgr.Api.Services;
 using TaskMgr.Api.Settings;
 using TaskMgr.Domain;
+using TaskMgr.Domain.Commands.Identity;
 using TaskMgr.Domain.Entities;
+using TaskMgr.Domain.Events;
 using TaskMgr.Domain.Services;
 
 namespace TaskMgr.Api
@@ -51,14 +53,13 @@ namespace TaskMgr.Api
             services.AddJwt();
             services.AddSingleton<IClaimsProvider, ClaimsProvider>();
             services.AddTransient<IdentityEventsHandler>();
-            services.AddAuthorization(x =>
-            x.AddPolicy("admin", p => p.RequireRole("admin")));
+           
             services.AddCors(options =>
             {
                 options.AddPolicy(MyAllowSpecificOrigins,
                 cors =>
                 {
-                    cors.WithOrigins("http://localhost:4200", "http://localhost:4204")
+                    cors.WithOrigins("http://localhost:4200")
                                         .AllowAnyHeader()
                                         .AllowAnyMethod();
                 });
@@ -83,18 +84,38 @@ namespace TaskMgr.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
+            if (env.IsDevelopment() || env.EnvironmentName == "local")
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
 
-            app.UseHttpsRedirection();
+            app.UseCors(MyAllowSpecificOrigins);
+
+            app.UseErrorHandler();
+            app.UseAuthentication();
+
             app.UseMvc();
+            ConfigureEventBus(app);
+            AddDefaultUser(app).GetAwaiter();
+        }
+
+        private void ConfigureEventBus(IApplicationBuilder app)
+        {
+            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+            eventBus.Subscribe<NewCodeGenerated, IdentityEventsHandler>();
+
+        }
+
+        async Task AddDefaultUser(IApplicationBuilder app)
+        {
+            var dispatcher = app.ApplicationServices.GetRequiredService<IDispatcher>();
+            var cmd = new SignUp(Guid.NewGuid().ToString(), 
+                "khaledov@gmail.com", 
+                "Password26",
+                "Khaled", 
+                "Ramadan");
+            await dispatcher.SendAsync(cmd);
+
         }
     }
 }

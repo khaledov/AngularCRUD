@@ -6,6 +6,6 @@ namespace TaskMgr.Domain.Services
 {
     public interface IClaimsProvider
     {
-        Task<IDictionary<string, string>> GetAsync(Guid userId);
+        Task<IDictionary<string, string>> GetAsync(string userId);
     }
 }

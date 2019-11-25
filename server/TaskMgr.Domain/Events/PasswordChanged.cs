@@ -8,10 +8,10 @@ namespace TaskMgr.Domain.Events
 {
     public class PasswordChanged : IEvent
     {
-        public Guid UserId { get; }
+        public string UserId { get; }
         public DateTime CreationDate { get; }
         [JsonConstructor]
-        public PasswordChanged(Guid userId)
+        public PasswordChanged(string userId)
         {
             UserId = userId;
             CreationDate = DateTime.UtcNow;

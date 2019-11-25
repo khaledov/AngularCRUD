@@ -32,7 +32,7 @@ namespace TaskMgr.Domain.CommandHandlers
 
         public async Task HandleAsync(SignUp command)
         {
-            var user = await _userRepository.GetAsync(command.Email);
+            var user = await _userRepository.GetByEmail(command.Email);
             if (user != null)
             {
                 throw new TaskMgrException(Codes.EmailInUse,
@@ -55,7 +55,7 @@ namespace TaskMgr.Domain.CommandHandlers
 
         public async Task HandleAsync(ChangePassword command)
         {
-            var user = await _userRepository.GetAsync(command.UserId);
+            var user = await _userRepository.GetById(command.UserId);
             if (user == null)
             {
                 throw new TaskMgrException(Codes.UserNotFound,
@@ -73,7 +73,7 @@ namespace TaskMgr.Domain.CommandHandlers
 
         public async Task HandleAsync(RecoverPassword command)
         {
-            var user = await _userRepository.GetAsync(command.Email);
+            var user = await _userRepository.GetByEmail(command.Email);
             if (user == null)
             {
                 throw new TaskMgrException(Codes.UserNotFound,
@@ -87,7 +87,7 @@ namespace TaskMgr.Domain.CommandHandlers
 
         public async Task HandleAsync(ChangePasswordWithRandom command)
         {
-            var user = await _userRepository.GetAsync(command.Email);
+            var user = await _userRepository.GetByEmail(command.Email);
             if (user == null)
             {
                 throw new TaskMgrException(Codes.UserNotFound,

@@ -7,17 +7,17 @@ namespace TaskMgr.Domain.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly IMongoRepository<User, Guid> _repository;
+        private readonly IMongoRepository<User, string> _repository;
 
-        public UserRepository(IMongoRepository<User, Guid> repository)
+        public UserRepository(IMongoRepository<User, string> repository)
         {
             _repository = repository;
         }
 
-        public async Task<User> GetAsync(Guid id)
+        public async Task<User> GetById(string id)
             => await _repository.Get(id);
 
-        public async Task<User> GetAsync(string email)
+        public async Task<User> GetByEmail(string email)
             => await _repository.Get(x => x.Email == email.ToLowerInvariant());
 
         public async Task AddAsync(User user)

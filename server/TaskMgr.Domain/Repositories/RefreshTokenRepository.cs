@@ -7,9 +7,9 @@ namespace TaskMgr.Domain.Repositories
 {
     public class RefreshTokenRepository : IRefreshTokenRepository
     {
-        private readonly IMongoRepository<RefreshToken, Guid> _repository;
+        private readonly IMongoRepository<RefreshToken, string> _repository;
 
-        public RefreshTokenRepository(IMongoRepository<RefreshToken, Guid> repository)
+        public RefreshTokenRepository(IMongoRepository<RefreshToken, string> repository)
         {
             _repository = repository;
         }

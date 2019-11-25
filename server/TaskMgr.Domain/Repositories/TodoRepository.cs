@@ -10,9 +10,9 @@ namespace TaskMgr.Domain.Repositories
     public class TodoRepository : ITodoRepository
     {
 
-        private readonly IMongoRepository<TodoItem, int> _repository;
+        private readonly IMongoRepository<TodoItem, string> _repository;
 
-        public TodoRepository(IMongoRepository<TodoItem, int> repository)
+        public TodoRepository(IMongoRepository<TodoItem, string> repository)
         {
             _repository = repository;
         }
@@ -25,10 +25,13 @@ namespace TaskMgr.Domain.Repositories
         public async Task Add(TodoItem item)
         => await _repository.Add(item);
 
-        public async Task Delete(int id)
+        public async Task Delete(string id)
         => await _repository.Delete(id);
 
         public async Task Update(TodoItem item)
         => await _repository.Update(item);
+
+        public async Task<TodoItem> Get(string Id)
+        => await _repository.Get(Id);
     }
 }

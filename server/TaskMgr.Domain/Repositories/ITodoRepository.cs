@@ -7,9 +7,10 @@ namespace TaskMgr.Domain.Repositories
 {
     public interface ITodoRepository
     {
+        Task<TodoItem> Get(string Id);
         Task<IEnumerable<TodoItem>> All(DateTime fromDate, DateTime toDate, Entities.TaskStatus state);
         Task Add(TodoItem item);
         Task Update(TodoItem item);
-        Task Delete(int id);
+        Task Delete(string id);
     }
 }

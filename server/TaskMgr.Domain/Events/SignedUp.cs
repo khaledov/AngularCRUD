@@ -8,13 +8,13 @@ namespace TaskMgr.Domain.Events
 {
     public class SignedUp : IEvent
     {
-        public Guid UserId { get; }
+        public string UserId { get; }
         public string Email { get; }
         public string FirstName { get; }
         public string LastName { get; }
         public DateTime CreationDate { get; }
         [JsonConstructor]
-        public SignedUp(Guid userId, string email, string firstName, string lastName)
+        public SignedUp(string userId, string email, string firstName, string lastName)
         {
             UserId = userId;
             Email = email;

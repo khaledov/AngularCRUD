@@ -6,11 +6,11 @@ namespace TaskMgr.Domain.Commands.Identity
 {
     public class ChangePassword : ICommand
     {
-        public Guid UserId { get; }
-        public string CurrentPassword { get; }
-        public string NewPassword { get; }
+        public string UserId { get; set; }
+        public string CurrentPassword { get; set; }
+        public string NewPassword { get; set; }
 
-        public ChangePassword(Guid userId,
+        public ChangePassword(string userId,
             string currentPassword, string newPassword)
         {
             UserId = userId;

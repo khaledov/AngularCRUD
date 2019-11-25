@@ -19,9 +19,9 @@ namespace TaskMgr.Domain
         public static void RegisterRepositories(this ContainerBuilder builder)
         {
 
-            builder.AddMongoRepository<RefreshToken, Guid>("RefreshTokens");
-            builder.AddMongoRepository<User, Guid>("Users");
-            builder.AddMongoRepository<TodoItem, int>("TodoItems");
+            builder.AddMongoRepository<RefreshToken, string>("RefreshTokens");
+            builder.AddMongoRepository<User, string>("Users");
+            builder.AddMongoRepository<TodoItem, string>("TodoItems");
         }
 
     }

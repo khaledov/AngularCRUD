@@ -17,12 +17,11 @@ namespace TaskMgr.Api.Controllers
             _dispatcher = dispatcher;
         }
       
-        protected Guid UserId
+        protected string UserId
         {
             get
             {
-                Guid.TryParse(User.FindFirst("sub")?.Value, out Guid id);
-                return id;
+              return  User.FindFirst("sub")?.Value;
             }
         }
 

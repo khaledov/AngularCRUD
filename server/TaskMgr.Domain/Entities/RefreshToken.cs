@@ -7,10 +7,10 @@ using System.Text;
 
 namespace TaskMgr.Domain.Entities
 {
-    public class RefreshToken : IIdentity<Guid>
+    public class RefreshToken : IIdentity<string>
     {
-        public Guid Id { get; private set; }
-        public Guid UserId { get; private set; }
+        public string Id { get; private set; }
+        public string UserId { get; private set; }
         public string Token { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public DateTime? RevokedAt { get; private set; }
@@ -22,7 +22,7 @@ namespace TaskMgr.Domain.Entities
 
         public RefreshToken(User user, IPasswordHasher<User> passwordHasher)
         {
-            Id = Guid.NewGuid();
+            Id = Guid.NewGuid().ToString();
             UserId = user.Id;
             CreatedAt = DateTime.UtcNow;
             Token = CreateToken(user, passwordHasher);

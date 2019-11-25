@@ -3,7 +3,7 @@ using System;
 
 namespace TaskMgr.Domain.Entities
 {
-    public class TodoItem:IIdentity<int>
+    public class TodoItem:IIdentity<string>
     {
         public TodoItem()
         {
@@ -14,7 +14,7 @@ namespace TaskMgr.Domain.Entities
         }
 
         
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         public string Description { get; set; }
         public DateTime? DueDate { get; set; }
